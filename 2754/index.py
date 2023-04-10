@@ -1,4 +1,3 @@
-#2023-04-10
 n = int(input())
 m = int(input())
 nums = list(map(int, input().split()))
@@ -11,4 +10,7 @@ def dfs(idx, value):
         return
     dfs(idx+1, value+nums[idx])
     dfs(idx+1, value-nums[idx])
+
+cnt = 0
+dfs(0, 0)
 print(cnt)
